@@ -21,13 +21,13 @@ chat_prompt2 = ChatPromptTemplate.from_messages([
     HumanMessagePromptTemplate.from_template("Can you tell me something interesting about {topic}.")
 ])
 
-prompt_text = chat_prompt.format_messages({"topic" : "Binomial expansion"})
-prompt_text_2 = chat_prompt2.format_messages({"topic" : "Politics"})
+prompt_text = chat_prompt.format_messages(topic = "Binomial expansion")
+prompt_text_2 = chat_prompt2.format_messages(topic = "Politics")
 
-response_1 = model_type.invoke(prompt_text.content)
-response_2 = model_type.invoke(prompt_text_2.content)
+response_1 = model_type.invoke(prompt_text)
+response_2 = model_type.invoke(prompt_text_2)
 
 
-print(response_1)
+print(response_1.content)
 print("\n------------------------------------------------\n")
-print(response_2)
+print(response_2.content)
