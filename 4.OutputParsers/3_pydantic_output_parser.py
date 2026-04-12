@@ -8,7 +8,7 @@ load_dotenv()
 
 
 model = init_chat_model(
-    model= "llama-3.3-70b-versatile",
+    model= "lla ma-3.3-70b-versatile",
     model_provider= "groq",
     temperature = 0.7
 )

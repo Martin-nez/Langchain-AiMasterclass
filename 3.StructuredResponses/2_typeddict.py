@@ -10,6 +10,7 @@ model = init_chat_model(
     temperature = 0.7
 )
 
+# Schema for structured response
 class Review(TypedDict):
     summary : str
     sentiment: str
